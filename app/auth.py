@@ -65,7 +65,7 @@ def register():
                     db.session.commit()
 
                     login_user(user)
-                    flash('Вход выполнен успешно', 'success')
+                    flash(f'Регистрация выполнена успешно, {login}', 'success')
                     next = request.args.get('next')
                     return redirect(url_for('index') or next)
                 flash('Логин занят', 'warning')
