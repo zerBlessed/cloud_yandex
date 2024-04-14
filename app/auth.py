@@ -50,6 +50,8 @@ def login():
 @bp.route('/register', methods=['POST'])
 def register():
     # try:
+        if request.method == 'GET':
+            return render_template('auth/register.html')
         if request.method == 'POST':
             login = request.form.get('login')
             password = request.form.get('password')
