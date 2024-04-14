@@ -47,7 +47,7 @@ def login():
     #     flash('Ошибка при загрузке', 'danger')
     #     return redirect(url_for('index'))
 
-@bp.route('/register', methods=['POST'])
+@bp.route('/register', methods=['POST', 'GET'])
 def register():
     # try:
         if request.method == 'GET':
