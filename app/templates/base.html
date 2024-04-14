@@ -17,13 +17,13 @@
         <nav class="navbar">
             <div class="container-fluid">
                 <div class="logo navbar-brand">
-                    <a href="{{ url_for('index') }}" class="text-light text-decoration-none">
+                    <a href="{{ url_for('index') }}" class="text-dark text-decoration-none">
                         Облака
                     </a>
                 </div>
                
                 {% if current_user.is_authenticated %}
-                <span>{{ current_user.login }}</span>
+                <span class="text-black">{{ current_user.login }}</span>
                 <a class="btn btn-dark" href="{{ url_for('auth.logout') }}">Выйти</a>
                 {% else %}
                     <a class="btn btn-dark" href="{{ url_for('auth.login') }}">Войти</a>
